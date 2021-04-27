@@ -68,7 +68,7 @@ client.connect((err) => {
     quriesCollection.updateOne(
       { _id: ObjectId(req.params.id) },
       {
-        $set: { customerName: req.body.customerName,address: req.body.address,phone: req.body.phone,district: req.body.district,channel: req.body.channel,fbid: req.body.fbid,productQuery: req.body.productQuery,purposeQuery: req.body.purposeQuery,remarks: req.body.remarks},
+        $set: { customerName: req.body.customerName,address: req.body.address,phone: req.body.phone,district: req.body.district,channel: req.body.channel,fbid: req.body.fbid,productQuery: req.body.productQuery,purposeQuery: req.body.purposeQuery,remarks: req.body.remarks,sellStatus: req.body.sellStatus},
       }
     )
     .then((result) => {
