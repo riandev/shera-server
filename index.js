@@ -54,6 +54,15 @@ client.connect((err) => {
       res.send(query);
     });
   });
+  
+  app.get("/dateList", (req, res) => {
+    const date = req.query.date;
+    console.log(date);
+    quriesCollection.find({ fullDate: date }).toArray((err, query) => {
+      console.log(query);
+      res.send(query);
+    });
+  });
 
   app.get("/updateQuery/:id", (req, res) => {
     quriesCollection
